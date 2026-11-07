@@ -21,10 +21,7 @@ except ImportError:
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/*": {"origins": [
-    "https://e-commerce-website-orcin-xi.vercel.app",
-    "http://localhost:3000"
-]}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 @app.route('/health', methods=['GET', 'OPTIONS'])
 def health_check():

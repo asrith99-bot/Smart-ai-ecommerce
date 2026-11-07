@@ -44,29 +44,32 @@
 
 <h2>🛠️ Tech Stack</h2>
 <ul>
-  <li><strong>Frontend:</strong> React, CSS, Auth0</li>
-  <li><strong>Backend:</strong> Node.js, Express, Axios</li>
-  <li><strong>Database:</strong> MongoDB Atlas (Cloud)</li>
-  <li><strong>AI/ML:</strong> Python Flask Recommendation System (Deployed on Render)</li>
+  <li><strong>Frontend:</strong> React 19, React Router v7, React-Toastify, Fluent Acrylic CSS</li>
+  <li><strong>Backend:</strong> Node.js, Express 5.x, MongoDB, Google Auth Library</li>
+  <li><strong>Database:</strong> MongoDB Atlas / Local MongoDB</li>
+  <li><strong>AI/ML:</strong> Python Flask Recommendation Engine</li>
 </ul>
 
 <h2>📂 Project Structure</h2>
 <pre>
-E-Commerce-Website/
-├── Screenshots/
-├── frontend/        # React Frontend (Vercel Deployed)
+Smart-ai-ecommerce/
+├── NexaCart_2.0_LinkedIn_Demo.mp4   # 1080p Full Demo Video
+├── frontend/                        # React 19 Fluent Acrylic SPA
 │   ├── public/
 │   ├── src/
-│   ├── package-lock.json
-│   └── package.json
-├── backend/         # Node.js Express Backend (Render Deployed)
+│   ├── package.json
+│   └── .env.example
+├── backend/                         # Node.js Express 5.x Backend
 │   ├── server.js
-│   ├── package-lock.json
-│   └── package.json
-├── ml-backend/      # Python Flask ML Backend (Render Deployed)
+│   ├── package.json
+│   └── .env.example
+├── ml-backend/                      # Python Flask ML Backend
 │   ├── app.py
 │   └── requirements.txt
+├── api/                             # Serverless API Endpoints
+│   └── index.js
 ├── .gitignore
+├── package.json
 └── README.md
 </pre>
 
@@ -129,25 +132,22 @@ python app.py
 Fully extendable to integrate advanced ML models using the Python-based <code>ml-backend</code>.
 </p>
 
-<h2>🌐 Live Project Links</h2>
-<ul>
-  <li><strong>E-Commerce Webapp:</strong> <a href="https://e-commerce-website-orcin-xi.vercel.app" target="_blank">https://e-commerce-website-orcin-xi.vercel.app</a></li>
-  <li><strong>Demo Video:</strong> <a href="https://drive.google.com/file/d/1--Flz496hk7AUpJ4EkmsKchNNVBoa6xv/view?usp=sharing" target="_blank">Watch on Google Drive</a></li>
-</ul>
-
-<h2>🖥️ Frontend Demo</h2>
-<p align="center">
-  <img src="https://github.com/1810suman/E-Commerce-Website/blob/main/Screenshots/Home_page.png" alt="Surakshit Store Front Page" width="600">
+<h2>🎬 Video Demonstration</h2>
+<p>
+  A complete 1080p Full HD screen recording walkthrough is included directly in this repository:
 </p>
+<ul>
+  <li><strong>File:</strong> <code>NexaCart_2.0_LinkedIn_Demo.mp4</code> (1080p, 60fps, 1m 24s)</li>
+  <li><strong>Demonstrates:</strong> Dual-role authentication, real-time Omnisearch, Amazon India vs. Flipkart price comparison matrix, Fluent Acrylic cart, 2-step express checkout, Google Maps courier dispatch, and the Executive Competitor Intelligence Hub.</li>
+</ul>
 
 <h2>💡 Author</h2>
 <p>
-  Developed with ❤️ by <strong>Suman Choudhury</strong>
+  Developed by <strong>Asrith Pendyala</strong><br>
+  GitHub: <a href="https://github.com/asrith99-bot" target="_blank">@asrith99-bot</a>
 </p>
 
-<h2>🔗 Useful Links</h2>
+<h2>🔗 Project Repository</h2>
 <ul>
-  <li><a href="https://github.com/1810suman/E-Commerce-Website" target="_blank">GitHub Repository</a></li>
-  <li><a href="https://dummyjson.com" target="_blank">DummyJSON API for Sample Products</a></li>
-  <li><a href="https://auth0.com" target="_blank">Auth0 for Secure Authentication</a></li>
+  <li><a href="https://github.com/asrith99-bot/Smart-ai-ecommerce" target="_blank">https://github.com/asrith99-bot/Smart-ai-ecommerce</a></li>
 </ul>
