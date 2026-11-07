@@ -1,0 +1,289 @@
+/* ==========================================================================
+   DeliveryDetails.css - Acrylic Delivery Form with Google Maps & Saved Addrs
+   ========================================================================== */
+
+.acrylic-delivery-form-card {
+  background: rgba(17, 24, 39, 0.88);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.delivery-card-header {
+  margin-bottom: 20px;
+}
+
+.delivery-header-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.delivery-card-header h2 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.delivery-card-header p {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.btn-gps-locate {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #34d399;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-gps-locate:hover:not(:disabled) {
+  background: rgba(16, 185, 129, 0.22);
+  border-color: #34d399;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-gps-locate:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.btn-google-autofill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(66, 133, 244, 0.12);
+  border: 1px solid rgba(66, 133, 244, 0.3);
+  border-radius: var(--radius-sm);
+  color: #93c5fd;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-google-autofill:hover {
+  background: rgba(66, 133, 244, 0.22);
+  border-color: #60a5fa;
+  box-shadow: 0 0 16px rgba(66, 133, 244, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Saved Addresses Quick Pick */
+.saved-addr-quickpick-section {
+  margin-bottom: 22px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+}
+
+.saved-addr-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.saved-addr-chip {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.saved-addr-chip:hover {
+  background: rgba(30, 41, 59, 0.7);
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateY(-2px);
+}
+
+.saved-addr-chip.active {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: #818cf8;
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.25);
+}
+
+.chip-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.chip-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+}
+
+.chip-tag.home {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+
+.chip-tag.office {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+}
+
+.chip-def {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.chip-line {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.chip-sub {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Form Styles */
+.delivery-grid-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+/* Delivery Maps Pinpoint Card */
+.delivery-maps-pinpoint-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.maps-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.maps-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.maps-icon {
+  font-size: 24px;
+}
+
+.maps-title-wrap strong {
+  font-size: 14px;
+  color: #ffffff;
+  display: block;
+}
+
+.maps-title-wrap p {
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.maps-external-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: #38bdf8;
+  text-decoration: none;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  transition: all 0.2s ease;
+}
+
+.maps-external-link:hover {
+  background: rgba(56, 189, 248, 0.2);
+  color: #ffffff;
+  border-color: #38bdf8;
+}
+
+.maps-iframe-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.form-actions-full {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+}
+
+.form-actions-full .btn-acrylic-primary {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .delivery-grid-form {
+    grid-template-columns: 1fr;
+  }
+  .saved-addr-chips-grid {
+    grid-template-columns: 1fr;
+  }
+}

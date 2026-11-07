@@ -1,0 +1,186 @@
+{
+  "sorts": [
+    {
+      "sort": "recommended",
+      "ok": true,
+      "found": 50,
+      "details": []
+    },
+    {
+      "sort": "rating",
+      "ok": true,
+      "found": 50,
+      "details": []
+    },
+    {
+      "sort": "reviews",
+      "ok": true,
+      "found": 50,
+      "details": []
+    },
+    {
+      "sort": "popular",
+      "ok": true,
+      "found": 50,
+      "details": []
+    },
+    {
+      "sort": "value",
+      "ok": true,
+      "found": 50,
+      "details": []
+    },
+    {
+      "sort": "price-asc",
+      "ok": true,
+      "found": 50,
+      "details": []
+    },
+    {
+      "sort": "price-desc",
+      "ok": true,
+      "found": 50,
+      "details": []
+    },
+    {
+      "sort": "newest",
+      "ok": true,
+      "found": 50,
+      "details": []
+    }
+  ],
+  "nl": [
+    {
+      "query": "laptop within 50000 with gaming and work",
+      "parsed": null,
+      "found": 5,
+      "top": [
+        {
+          "id": "1082",
+          "title": "New DELL XPS 13 9300 Laptop",
+          "category": "laptops",
+          "price": 1499.99
+        },
+        {
+          "id": "1080",
+          "title": "Huawei Matebook X Pro",
+          "category": "laptops",
+          "price": 1399.99
+        },
+        {
+          "id": "1081",
+          "title": "Lenovo Yoga 920",
+          "category": "laptops",
+          "price": 1099.99
+        }
+      ],
+      "issues": []
+    },
+    {
+      "query": "phone under 20000 with good camera",
+      "parsed": null,
+      "found": 10,
+      "top": [
+        {
+          "id": "1014",
+          "title": "Knoll Saarinen Executive Conference Chair",
+          "category": "furniture",
+          "price": 499.99
+        },
+        {
+          "id": "1012",
+          "title": "Annibale Colombo Sofa",
+          "category": "furniture",
+          "price": 2499.99
+        },
+        {
+          "id": "1092",
+          "title": "Sports Sneakers Off White Red",
+          "category": "mens-shoes",
+          "price": 109.99
+        }
+      ],
+      "issues": []
+    },
+    {
+      "query": "t-shirt for gaming",
+      "parsed": null,
+      "found": 5,
+      "top": [
+        {
+          "id": "1084",
+          "title": "Gigabyte Aorus Men Tshirt",
+          "category": "mens-shirts",
+          "price": 24.99
+        },
+        {
+          "id": "1085",
+          "title": "Man Plaid Shirt",
+          "category": "mens-shirts",
+          "price": 34.99
+        },
+        {
+          "id": "1083",
+          "title": "Blue & Black Check Shirt",
+          "category": "mens-shirts",
+          "price": 29.99
+        }
+      ],
+      "issues": []
+    },
+    {
+      "query": "watch under 5000",
+      "parsed": null,
+      "found": 2,
+      "top": [
+        {
+          "id": "1094",
+          "title": "Longines Master Collection",
+          "category": "mens-watches",
+          "price": 1499.99
+        },
+        {
+          "id": "1093",
+          "title": "Brown Leather Belt Watch",
+          "category": "mens-watches",
+          "price": 89.99
+        }
+      ],
+      "issues": []
+    },
+    {
+      "query": "laptop 50000-70000 with rtx",
+      "parsed": null,
+      "found": 0,
+      "top": [],
+      "issues": []
+    },
+    {
+      "query": "camera with 4k video under 100000",
+      "parsed": null,
+      "found": 10,
+      "top": [
+        {
+          "id": "1099",
+          "title": "Amazon Echo Plus",
+          "category": "mobile-accessories",
+          "price": 99.99
+        },
+        {
+          "id": "1058",
+          "title": "Fork",
+          "category": "kitchen-accessories",
+          "price": 3.99
+        },
+        {
+          "id": "1092",
+          "title": "Sports Sneakers Off White Red",
+          "category": "mens-shoes",
+          "price": 109.99
+        }
+      ],
+      "issues": []
+    }
+  ],
+  "timestamp": "2026-08-12T08:49:15.917Z"
+}

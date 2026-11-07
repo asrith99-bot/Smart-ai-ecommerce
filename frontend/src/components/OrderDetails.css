@@ -1,0 +1,232 @@
+/* ==========================================================================
+   OrderDetails.css - Acrylic Order Details & Checkpoints
+   ========================================================================== */
+
+.acrylic-order-details-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.details-nav-header {
+  margin-bottom: 24px;
+}
+
+.back-link-btn {
+  color: #38bdf8;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.details-nav-header h2 {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.order-details-acrylic-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 28px;
+}
+
+.tracking-timeline-card {
+  background: rgba(17, 24, 39, 0.88);
+  backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.tracking-top-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.tracking-label {
+  font-size: 11px;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.tracking-code {
+  font-size: 22px;
+  margin-top: 4px;
+}
+
+.status-badge-chip {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #6ee7b7;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+}
+
+.checkpoints-timeline h4 {
+  font-size: 16px;
+  color: #f8fafc;
+  margin-bottom: 20px;
+}
+
+.timeline-items-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-entry {
+  display: flex;
+  gap: 16px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.timeline-entry:last-child {
+  padding-bottom: 0;
+}
+
+.entry-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20px;
+}
+
+.entry-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+  z-index: 2;
+}
+
+.entry-line {
+  position: absolute;
+  top: 12px;
+  bottom: 0;
+  left: 5px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.entry-content {
+  flex: 1;
+}
+
+.entry-time {
+  font-size: 11px;
+  color: #64748b;
+  display: block;
+}
+
+.entry-title {
+  font-size: 14px;
+  color: #f8fafc;
+  display: block;
+  margin: 2px 0 4px;
+}
+
+.entry-desc {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+/* Sidebar Column */
+.order-summary-sidebar-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shipping-address-acrylic-card, .items-recap-acrylic-card {
+  background: rgba(17, 24, 39, 0.88);
+  backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.5);
+}
+
+.shipping-address-acrylic-card h4, .items-recap-acrylic-card h4 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 8px;
+}
+
+.address-block strong {
+  color: #f8fafc;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.address-block p {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.recap-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.recap-item img {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #1e293b;
+}
+
+.it-meta {
+  flex: 1;
+}
+
+.it-meta strong {
+  font-size: 13px;
+  color: #f8fafc;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.it-meta small {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.total-recap-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 12px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+@media (max-width: 860px) {
+  .order-details-acrylic-grid {
+    grid-template-columns: 1fr;
+  }
+}

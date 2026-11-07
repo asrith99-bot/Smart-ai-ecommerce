@@ -1,0 +1,302 @@
+/* ==========================================================================
+   NexaCart 2.0 - Fluent Acrylic Design System
+   High-precision Acrylic Material, Depth Layering, Specular Highlights
+   ========================================================================== */
+
+:root {
+  /* Fonts */
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Acrylic Material - Dark Theme (Default) */
+  --acrylic-bg: #090d16;
+  --acrylic-bg-subtle: #0d1322;
+  --acrylic-surface: rgba(17, 24, 39, 0.88);
+  --acrylic-surface-hover: rgba(23, 32, 54, 0.92);
+  --acrylic-surface-elevated: rgba(26, 36, 61, 0.94);
+  --acrylic-surface-glass: rgba(15, 23, 42, 0.75);
+  --acrylic-surface-translucent: rgba(255, 255, 255, 0.04);
+  
+  /* Material Blur & Specular Sheen */
+  --acrylic-blur: blur(28px) saturate(180%);
+  --acrylic-blur-subtle: blur(16px) saturate(140%);
+  --acrylic-border: 1px solid rgba(255, 255, 255, 0.08);
+  --acrylic-border-subtle: 1px solid rgba(255, 255, 255, 0.05);
+  --acrylic-border-accent: 1px solid rgba(99, 102, 241, 0.35);
+  --acrylic-border-active: 1px solid rgba(129, 140, 248, 0.6);
+  
+  /* Inset & Ambient Shadows */
+  --acrylic-inset: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  --acrylic-inset-deep: inset 0 2px 4px rgba(0, 0, 0, 0.35);
+  --acrylic-shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --acrylic-shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --acrylic-shadow-lg: 0 16px 40px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  --acrylic-shadow-glow: 0 0 25px rgba(99, 102, 241, 0.2), 0 12px 30px rgba(0, 0, 0, 0.5);
+
+  /* Colors */
+  --color-primary: #6366f1;
+  --color-primary-light: #818cf8;
+  --color-primary-dark: #4f46e5;
+  --color-cyan: #06b6d4;
+  --color-emerald: #10b981;
+  --color-amber: #f59e0b;
+  --color-rose: #f43f5e;
+  --color-blue: #3b82f6;
+
+  /* Competitor Brand Accents */
+  --comp-nexacart: #6366f1;
+  --comp-amazon: #ff9900;
+  --comp-flipkart: #2874f0;
+
+  /* Text & Foreground */
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --text-inverse: #0f172a;
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Reset & Background */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--acrylic-bg);
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 25%, rgba(6, 182, 212, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* Custom Scrollbar - Acrylic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 15, 26, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* Acrylic Container & Utility Classes */
+.acrylic-card {
+  background: var(--acrylic-surface);
+  backdrop-filter: var(--acrylic-blur);
+  -webkit-backdrop-filter: var(--acrylic-blur);
+  border: var(--acrylic-border);
+  box-shadow: var(--acrylic-shadow-md);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+}
+
+.acrylic-card:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: var(--acrylic-shadow-lg);
+}
+
+.acrylic-card-elevated {
+  background: var(--acrylic-surface-elevated);
+  backdrop-filter: var(--acrylic-blur);
+  -webkit-backdrop-filter: var(--acrylic-blur);
+  border: var(--acrylic-border);
+  box-shadow: var(--acrylic-shadow-lg);
+  border-radius: var(--radius-xl);
+}
+
+.acrylic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.06);
+  border: var(--acrylic-border-subtle);
+  box-shadow: var(--acrylic-inset);
+  white-space: nowrap;
+}
+
+.acrylic-badge-indigo {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.acrylic-badge-emerald {
+  background: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.acrylic-badge-amber {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fcd34d;
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.acrylic-badge-blue {
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Acrylic Buttons */
+.btn-acrylic-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 4px 14px rgba(79, 70, 229, 0.4);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-acrylic-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 6px 20px rgba(79, 70, 229, 0.55);
+  background: linear-gradient(135deg, #6366f1 0%, #60a5fa 100%);
+}
+
+.btn-acrylic-primary:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-acrylic-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  border: var(--acrylic-border);
+  box-shadow: var(--acrylic-shadow-sm);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  backdrop-filter: var(--acrylic-blur-subtle);
+  transition: all var(--transition-fast);
+}
+
+.btn-acrylic-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.btn-acrylic-secondary:active {
+  transform: translateY(1px);
+}
+
+/* Acrylic Inputs */
+.acrylic-input {
+  width: 100%;
+  padding: 11px 14px;
+  background: rgba(10, 15, 28, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--text-main);
+  font-size: 14px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.acrylic-input:focus {
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25), inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  background: rgba(13, 20, 36, 0.85);
+}
+
+.acrylic-input::placeholder {
+  color: var(--text-dim);
+}
+
+/* Toastify Acrylic Customization */
+.Toastify__toast {
+  background: rgba(17, 24, 39, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  border-radius: 12px !important;
+  color: #f8fafc !important;
+  font-family: var(--font-body) !important;
+}
+
+.Toastify__toast--success {
+  border-left: 4px solid var(--color-emerald) !important;
+}
+
+.Toastify__toast--error {
+  border-left: 4px solid var(--color-rose) !important;
+}
+
+.Toastify__close-button {
+  color: #94a3b8 !important;
+}
